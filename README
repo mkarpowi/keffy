@@ -1,0 +1,41 @@
+In config.sh file select linux version and TOP directory of the project
+
+in /etc/default/grub add line
+GRUB_CMDLINE_LINUX_DEFAULT="intel_pstate=disable acpi_cpufreq_coord_type_force=sw_all"
+or modify appropriately existing line
+
+Download kernel;
+/bin/bash get_kernel.sh
+It is possible that some versions of the kernel be not available for download using this script.
+In case of using such a version of the kernel, provide kernel sources under the name linux-$LINUX_VERSION.
+
+Clone repositories:
+/bin/bash clone_repos.sh
+
+Install python and in telemetry install requiremnents.txt(preferabely in virt env)
+
+Add perflib patch:
+/bin/bash apply_perflib_patch.sh
+
+
+
+/bin/bash $CONTROLLER_PATH/copy_to_kernel.sh
+
+
+Compile kernel:
+/bin/bash compile_kernel.sh
+Menuconfig will appear
+Go to
+    -> Power management and ACPI options
+        -> CPU Frequency scaling
+            -> select ondemand cpufreq policy governor as module
+
+In case of incorrect permissions, the command 'make modules_install' might now work properly.
+In that case change permissions or issue issue the command as root.
+
+Reboot and select new kernel
+
+
+
+
+
