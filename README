@@ -17,10 +17,8 @@ Install python and in telemetry install requiremnents.txt(preferabely in virt en
 Add perflib patch:
 /bin/bash apply_perflib_patch.sh
 
-
-
+Copy controller sources to kernel
 /bin/bash $CONTROLLER_PATH/copy_to_kernel.sh
-
 
 Compile kernel:
 /bin/bash compile_kernel.sh
@@ -35,7 +33,6 @@ In that case change permissions or issue issue the command as root.
 
 Reboot and select new kernel
 
-
-
-
+Chekc how the controller works:
+/bin/bash play.sh
 
