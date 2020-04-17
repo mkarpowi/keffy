@@ -12,6 +12,9 @@ In case of using such a version of the kernel, provide kernel sources under the 
 Clone repositories:
 /bin/bash clone_repos.sh
 
+Compile repositories:
+/bin/bash compile_repos.sh
+
 Install python and in telemetry install requiremnents.txt(preferabely in virt env)
 
 Add perflib patch:
