@@ -21,7 +21,7 @@ Add perflib patch:
 /bin/bash apply_perflib_patch.sh
 
 Copy controller sources to kernel
-/bin/bash $CONTROLLER_PATH/copy_to_kernel.sh
+/bin/bash copy_to_kernel.sh
 
 Compile kernel:
 /bin/bash compile_kernel.sh
@@ -32,7 +32,7 @@ Go to
             -> select ondemand cpufreq policy governor as module
 
 In case of incorrect permissions, the command 'make modules_install' might now work properly.
-In that case change permissions or issue issue the command as root.
+In that case change permissions or issue the command as root.
 
 Reboot and select new kernel
 
