@@ -2,7 +2,7 @@
 
 export LINUX_VERSION=5.6.4
 #export LINUX_VERSION=4.11-rc2
-export TOP_DIR=/home/milosz/work
+export TOP_DIR=~/work
 
 
 export CPUFREQ_REPO=git@git2.zisi.nask.pl:miloszm/cpufreq.git
