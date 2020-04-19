@@ -1,7 +1,6 @@
 #!/bin/bash
 
 source config.sh
-cd $CONTROLLER_PATH
 /bin/bash copy_to_kernel.sh
 cd $TELEMETRY_PATH
 make clean; make KERNEL_PATH=$KERNEL_PATH
