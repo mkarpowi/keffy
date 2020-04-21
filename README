@@ -32,9 +32,6 @@ Go to
             -> select ondemand cpufreq policy governor as module (press M when highliting ondemand)
 Save and exit
 
-In case of incorrect permissions, the command 'make modules_install' might now work properly.
-In that case change permissions or issue the command as root.
-
 Reboot and select new kernel
 
 Chekc how the controller works:
