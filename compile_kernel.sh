@@ -7,7 +7,9 @@ echo "Installing kernel build utilities"
 sudo apt-get install build-essential libncurses-dev bison flex libssl-dev libelf-dev
 
 make localmodconfig
-make menuconfig
+/bin/bash edit_kernel_config.sh
+make oldconfig
+#make menuconfig
 make -j $(nproc)
 sudo make modules_install
 
