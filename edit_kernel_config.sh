@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source config.sh
+source config.sh || source $CONTROLLER_CONF_PATH/config.sh
 
 CONF_FILE=$KERNEL_PATH/.config
 
