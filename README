@@ -1,38 +1,19 @@
-In config.sh file select linux version and TOP directory of the project
+In config.sh file select linux kernel version and TOP directory of the project.
+Available kernels:
+    5.3.1
+    5.6.4
 
-in /etc/default/grub add line
-GRUB_CMDLINE_LINUX_DEFAULT="intel_pstate=disable acpi_cpufreq_coord_type_force=sw_all"
-or modify appropriately existing line
+If the desired kernels version is older than the current one, in order to be
+able to select newly installed kernel, set GRUB_TIMEOUT_STYLE as menu.
+In order to do this, open grub file:
+sudo vim /etc/default/grub
+and modify GRUB_TIMEOUT_STYLE entry:
+GRUB_TIMEOUT_STYLE="menu"
 
-Download kernel;
-/bin/bash get_kernel.sh
-It is possible that some versions of the kernel be not available for download using this script.
-In case of using such a version of the kernel, provide kernel sources under the name linux-$LINUX_VERSION.
+Download, compile and install kernel:
+/bin/bash install_all.sh
 
-Clone repositories:
-/bin/bash clone_repos.sh
-
-Compile repositories:
-/bin/bash compile_repos.sh
-
-Install python and in telemetry install requiremnents.txt(preferabely in virt env)
-
-Add perflib patch:
-/bin/bash apply_perflib_patch.sh
-
-Copy controller sources to kernel
-/bin/bash copy_to_kernel.sh
-
-Compile kernel:
-/bin/bash compile_kernel.sh
-Menuconfig will appear
-Go to
-    -> Power management and ACPI options
-        -> CPU Frequency scaling
-            -> select ondemand cpufreq policy governor as module (press M when highliting ondemand)
-Save and exit
-
-Reboot and select new kernel
+Reboot. If necessary, select new kernel.
 
 Chekc how the controller works:
 /bin/bash play.sh
