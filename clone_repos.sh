@@ -13,12 +13,23 @@ trap f ERR
 source config.sh
 
 cd $TOP_DIR
-git clone $TELEMETRY_REPO
-git clone $LOAD_STRESS_REPO
-git clone $CONTROLLER_REPO
+if [ ! -d "$TOP_DIR/telemetry" ]; then
+    git clone $TELEMETRY_REPO
+fi
+
+if [ ! -d "$TOP_DIR/load_stress" ]; then
+    git clone $LOAD_STRESS_REPO
+fi
+
+if [ ! -d "$TOP_DIR/controller" ]; then
+    git clone $CONTROLLER_REPO
+fi
+
 cd $CPUFREQ_PATH
 git init
-git remote add origin $CPUFREQ_REPO
+if ! git remote | grep origin > /dev/null; then
+    git remote add origin $CPUFREQ_REPO
+fi
 git fetch;
 git clean -f;
 git checkout master-$LINUX_VERSION;
