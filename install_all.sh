@@ -24,11 +24,11 @@ echo "Successfully downloaded kernel"
 echo "Successfully cloned repos"
 /bin/bash checkout_repos.sh
 echo "Successfully checked-out repos"
-/bin/bash compile_repos.sh
-echo "Successfully compiled repos"
 /bin/bash apply_perflib_patch.sh
 echo "Successfully applied perflib_patches"
 /bin/bash copy_to_kernel.sh
 echo "Successfully copied sources to kernel"
+/bin/bash compile_repos.sh
+echo "Successfully compiled repos"
 /bin/bash compile_kernel.sh
 echo "Successfully compiled kernel"
