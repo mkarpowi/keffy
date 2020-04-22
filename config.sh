@@ -16,3 +16,4 @@ export CPUFREQ_PATH=$KERNEL_PATH/drivers/cpufreq/
 export TELEMETRY_PATH=$TOP_DIR/telemetry
 export LOAD_STRESS_PATH=$TOP_DIR/load_stress
 export CONTROLLER_PATH=$TOP_DIR/controller
+export CONTROLLER_CONF_PATH=$PWD
