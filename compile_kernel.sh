@@ -6,7 +6,7 @@ sudo apt-get install build-essential libncurses-dev bison flex libssl-dev libelf
 echo "Configuring kernel options"
 cd $KERNEL_PATH
 yes "" | make localmodconfig
-/bin/bash edit_kernel_config.sh
+/bin/bash $CONTROLLER_CONF_PATH/edit_kernel_config.sh
 yes "" | make oldconfig
 
 echo "Compiling kernel"
