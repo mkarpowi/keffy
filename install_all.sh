@@ -22,6 +22,10 @@ echo "Successfully modified grub file"
 echo "Successfully downloaded kernel"
 /bin/bash clone_repos.sh
 echo "Successfully cloned repos"
+/bin/bash checkout_repos.sh
+echo "Successfully checked-out repos"
+/bin/bash compile_repos.sh
+echo "Successfully compiled repos"
 /bin/bash apply_perflib_patch.sh
 echo "Successfully applied perflib_patches"
 /bin/bash copy_to_kernel.sh
