@@ -13,6 +13,11 @@ trap f ERR
 source config.sh
 PERFLIB_FILE=$KERNEL_PATH/drivers/acpi/processor_perflib.c
 
+if `grep -q 'coord_type_force' $PERFLIB_FILE`; then
+    echo "Perflib patch has already been applied."
+    exit 0
+fi
+
 sed -i '/static DEFINE_MUTEX(performance_mutex);/a \
 \
 /*\
