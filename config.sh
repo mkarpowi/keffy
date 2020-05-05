@@ -5,10 +5,10 @@ export LINUX_VERSION=5.6.4
 export TOP_DIR=~/work
 
 
-export CPUFREQ_REPO=git@git2.zisi.nask.pl:miloszm/cpufreq.git
-export TELEMETRY_REPO=git@git2.zisi.nask.pl:miloszm/telemetry.git
-export CONTROLLER_REPO=git@git2.zisi.nask.pl:miloszm/controller.git
-export LOAD_STRESS_REPO=git@git2.zisi.nask.pl:miloszm/load_stress.git
+export CPUFREQ_REPO=git@git2.zisi.nask.pl:cpu_control/cpufreq.git
+export TELEMETRY_REPO=git@git2.zisi.nask.pl:cpu_control/telemetry.git
+export CONTROLLER_REPO=git@git2.zisi.nask.pl:cpu_control/controller.git
+export LOAD_STRESS_REPO=git@git2.zisi.nask.pl:cpu_control/load_stress.git
 
 
 export KERNEL_PATH=$TOP_DIR/linux-$LINUX_VERSION
