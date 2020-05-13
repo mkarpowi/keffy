@@ -12,12 +12,12 @@ f () {
 trap f ERR
 
 source config.sh
-/bin/bash copy_to_kernel.sh
+/bin/bash copy_driver_to_kernel.sh
 cd $TELEMETRY_PATH
 make clean; make KERNEL_PATH=$KERNEL_PATH
-cd $CPUFREQ_PATH
-sh make_modules.sh
-sudo sh replace_driver.sh
+cd $CONTROLLER_CONF_PATH
+/bin/bash make_modules.sh
+sudo /bin/bash replace_driver.sh
 cd $TELEMETRY_PATH
 sleep 1
 sudo ./tlm
