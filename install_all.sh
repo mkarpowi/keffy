@@ -23,7 +23,7 @@ echo "Successfully cloned repos"
 echo "Successfully checked-out repos"
 /bin/bash apply_perflib_patch.sh
 echo "Successfully applied perflib_patches"
-/bin/bash copy_to_kernel.sh
+/bin/bash copy_driver_to_kernel.sh
 echo "Successfully copied sources to kernel"
 /bin/bash compile_repos.sh
 echo "Successfully compiled repos"
