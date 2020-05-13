@@ -15,6 +15,11 @@ Download, compile and install kernel:
 
 Reboot. If necessary, select new kernel.
 
-Chekc how the controller works:
+Check how the controller works:
 /bin/bash play.sh
+
+In case of not having installed all required python tools, install_tools.sh
+script can be used:
+/bin/bash install_tools.sh
+
 
