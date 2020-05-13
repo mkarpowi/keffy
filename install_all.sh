@@ -25,6 +25,8 @@ echo "Successfully checked-out repos"
 echo "Successfully applied perflib_patches"
 /bin/bash copy_driver_to_kernel.sh
 echo "Successfully copied sources to kernel"
+/bin/bash patch_cpufreq_makefile.sh
+echo "Successfully patched cpufreq makefile"
 /bin/bash compile_repos.sh
 echo "Successfully compiled repos"
 /bin/bash compile_kernel.sh
