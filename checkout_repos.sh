@@ -12,13 +12,6 @@ f () {
 trap f ERR
 
 source config.sh
-cd $CONTROLLER_PATH
-if ! git remote | grep origin > /dev/null; then
-    git remote add origin $CONTROLLER_REPO
-fi
-git fetch;
-git checkout master;
-git merge origin/master;
 
 cd $TELEMETRY_PATH
 if ! git remote | grep origin > /dev/null; then
@@ -28,9 +21,9 @@ git fetch;
 git checkout master-$LINUX_VERSION;
 git merge origin/master-$LINUX_VERSION;
 
-cd $CPUFREQ_PATH
+cd $CPUFREQ_ADAPTIVE_PATH
 if ! git remote | grep origin > /dev/null; then
-    git remote add origin $CPUFREQ_REPO
+    git remote add origin $CPUFREQ_ADAPTIVE_REPO
 fi
 git fetch;
 git checkout master-$LINUX_VERSION;

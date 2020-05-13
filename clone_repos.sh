@@ -21,16 +21,7 @@ if [ ! -d "$TOP_DIR/load_stress" ]; then
     git clone $LOAD_STRESS_REPO
 fi
 
-if [ ! -d "$TOP_DIR/controller" ]; then
-    git clone $CONTROLLER_REPO
+if [ ! -d "$TOP_DIR/cpufreq_adaptive" ]; then
+    git clone $CPUFREQ_ADAPTIVE_REPO
 fi
 
-cd $CPUFREQ_PATH
-git init
-if ! git remote | grep origin > /dev/null; then
-    git remote add origin $CPUFREQ_REPO
-fi
-git fetch;
-git clean -f;
-git checkout master-$LINUX_VERSION;
-git merge origin/master-$LINUX_VERSION;
