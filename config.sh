@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export LINUX_VERSION=5.6.4
+export LINUX_VERSION=5.3.1
 #export LINUX_VERSION=4.11-rc2
 export TOP_DIR=~/work
 
