@@ -27,7 +27,14 @@ sleep 10
 kill -9 $(pgrep lstress)
 sleep 10
 ./lstress -c 1 -w 0.5 &
-sleep 20
+sleep 5
+echo 90 | sudo tee -a /sys/devices/system/cpu/cpufreq/adaptive/uc
+sleep 5
+echo 60 | sudo tee -a /sys/devices/system/cpu/cpufreq/adaptive/uc
+sleep 5
+echo 90 | sudo tee -a /sys/devices/system/cpu/cpufreq/adaptive/uc
+sleep 5
+echo 60 | sudo tee -a /sys/devices/system/cpu/cpufreq/adaptive/uc
 kill -9 $(pgrep lstress)
 cd $TELEMETRY_PATH
 sudo ./tlm -f csv > data.txt; python3 plot_kernel_data.py
