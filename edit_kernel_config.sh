@@ -12,8 +12,6 @@ f () {
 
 trap f ERR
 
-source config.sh || source $CONTROLLER_CONF_PATH/config.sh
-
 CONF_FILE=$KERNEL_PATH/.config
 
 if `grep -q 'CONFIG_CPU_FREQ_DEFAULT_GOV_ONDEMAND=y' $CONF_FILE`; then
