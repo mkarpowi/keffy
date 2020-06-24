@@ -3,7 +3,6 @@
 In config.sh file select linux kernel version (*LINUX_VERSION*) and top directory (*TOP_DIR*) of the project.
 Currently available kernels:
 - 5.3.1
-- 5.6.4
 
 If the desired kernels version is older than the current one, in order to be
 able to select newly installed kernel, set *GRUB_TIMEOUT_STYLE* as *menu*.
