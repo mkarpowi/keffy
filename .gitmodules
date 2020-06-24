@@ -1,0 +1,12 @@
+[submodule "cpufreq_adaptive"]
+	path = cpufreq_adaptive
+	url = https://github.com/mmalczak/cpufreq_adaptive.git
+[submodule "load_stress"]
+	path = load_stress
+	url = https://github.com/mmalczak/load_stress.git
+[submodule "telemetry"]
+	path = telemetry
+	url = https://github.com/mmalczak/telemetry.git
+[submodule "test_python"]
+	path = test_python
+	url = https://github.com/mmalczak/test_python.git
