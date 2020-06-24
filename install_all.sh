@@ -17,10 +17,9 @@ sudo /bin/bash edit_grub.sh
 echo "Successfully modified grub file"
 /bin/bash get_kernel.sh
 echo "Successfully downloaded kernel"
-/bin/bash clone_repos.sh
+git submodule init
+git submodule update
 echo "Successfully cloned repos"
-/bin/bash checkout_repos.sh
-echo "Successfully checked-out repos"
 /bin/bash apply_perflib_patch.sh
 echo "Successfully applied perflib_patches"
 /bin/bash copy_driver_to_kernel.sh

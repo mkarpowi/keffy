@@ -1,8 +1,9 @@
 # Adaptive CPU frequency controller
 
-In config.sh file select linux kernel version (*LINUX_VERSION*) and top directory (*TOP_DIR*) of the project.
-Currently available kernels:
-- 5.3.1
+## User
+
+Select git branch based on desired kernel version.
+
 
 If the desired kernels version is older than the current one, in order to be
 able to select newly installed kernel, set *GRUB_TIMEOUT_STYLE* as *menu*.
@@ -12,7 +13,9 @@ In order to do this, open grub file:
 sudo vim /etc/default/grub
 ```
 and modify *GRUB_TIMEOUT_STYLE* entry:
-```GRUB_TIMEOUT_STYLE="menu"```
+```
+GRUB_TIMEOUT_STYLE="menu"
+```
 
 Download, patch, compile and install the kernel with adaptive CPU controller:
 ```
@@ -32,3 +35,7 @@ In the case of not having installed all the required python tools, you can use *
 ```
 /bin/bash install_tools.sh
 ```
+
+## Developer
+
+When creating new branch, modify kernel version in config.sh and update submodules. You can use checkout_repos script.
