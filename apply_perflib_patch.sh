@@ -28,17 +28,6 @@ sed -i '/static DEFINE_MUTEX(performance_mutex);/a \
 static unsigned int coord_type_force = CPUFREQ_SHARED_TYPE_NONE;' $PERFLIB_FILE
 
 
-#sed -i '/pr->performance->shared_type = CPUFREQ_SHARED_TYPE_ALL;/d' $PERFLIB_FILE
-#sed -i '/else if (pdomain->coord_type == DOMAIN_COORD_TYPE_HW_ALL)/d' $PERFLIB_FILE
-#sed -i '/pr->performance->shared_type = CPUFREQ_SHARED_TYPE_HW;/d' $PERFLIB_FILE
-#sed -i '/else if (pdomain->coord_type == DOMAIN_COORD_TYPE_SW_ANY)/d' $PERFLIB_FILE
-#sed -i '/pr->performance->shared_type = CPUFREQ_SHARED_TYPE_ANY;/d' $PERFLIB_FILE
-
-#    bleble\
-#    blebleble/g' $PERFLIB_FILE
-
-#sed -i 's/if (pdomain->coord_type == DOMAIN_COORD_TYPE_SW_ALL)/\
-
 sed -i '/Validate the Domain info/{n;N;N;N;N;N;N;N;d}' $PERFLIB_FILE
 sed -i '/Validate the Domain info/a \
 		count_target = pdomain->num_processors;\
@@ -107,5 +96,3 @@ static int __init coord_type_force_setup(char *str)\
 }\
 \
 early_param("acpi_cpufreq_coord_type_force", coord_type_force_setup);' $PERFLIB_FILE
-
-

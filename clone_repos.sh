@@ -24,4 +24,3 @@ fi
 if [ ! -d "$TOP_DIR/cpufreq_adaptive" ]; then
     git clone $CPUFREQ_ADAPTIVE_REPO
 fi
-
