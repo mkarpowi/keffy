@@ -12,9 +12,14 @@ In order to do this, open grub file:
 ```
 sudo vim /etc/default/grub
 ```
-and modify *GRUB_TIMEOUT_STYLE* entry:
+modify *GRUB_TIMEOUT_STYLE* and *GRUB_TIMEOUT* entry:
 ```
 GRUB_TIMEOUT_STYLE="menu"
+GRUB_TIMEOUT=10
+```
+and update grub:
+```
+update-grub
 ```
 
 Download, patch, compile and install the kernel with adaptive CPU controller:
