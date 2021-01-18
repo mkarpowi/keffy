@@ -3,18 +3,18 @@
 ## Introduction
 
 
-**Keffy** is an adaptive CPU performance controller operating in the Linux kernel 
-space as an **acpi-cpufreq dynamic CPU governor**. The controller autonomously 
-adapts the rules of its operations to the currently observed CPU workload 
+**Keffy** is an adaptive CPU performance controller operating in the Linux kernel
+space as an **acpi-cpufreq dynamic CPU governor**. The controller autonomously
+adapts the rules of its operations to the currently observed CPU workload
 profile while keeping the workload at the desired level.
 
-The controller has been designed as the indirect self-tuning regulator with 
+The controller has been designed as the indirect self-tuning regulator with
 robust recursive model estimation. For more details on the [project background](https://www.researchgate.net/publication/335110363_Fixed-point_self-tuning_CPU_performance_controller_for_Linux_kernel)
 and the control theory applied in the controller design, see:
 
 * Getka, M., and Karpowicz, M.P. *Fixed-point self-tuning CPU performance controller for Linux kernel.* 2019 International Conference on High Performance Computing & Simulation (HPCS). IEEE, 2019.
- 
-* Arabas, P., and Karpowicz, M.P. *Server Power Consumption: Measurements and Modeling with MSRs.* Challenges in Automation, Robotics and Measurement Techniques, Springer International Publishing, 233–244, 2016 
+
+* Arabas, P., and Karpowicz, M.P. *Server Power Consumption: Measurements and Modeling with MSRs.* Challenges in Automation, Robotics and Measurement Techniques, Springer International Publishing, 233–244, 2016
 
 * Karpowicz, M.P. *Energy‐efficient CPU frequency control for the Linux system.* Concurrency and Computation: Practice and Experience 28.2 (2016): 420-437.
 
@@ -83,5 +83,4 @@ you can use *install_tools.sh* script:
 When creating new branch, modify the kernel version in **config.sh** and update
 submodules. You can use **checkout_repos.sh** script. Bear in mind that
 cpufreq_adaptive submodule has different branch for every kernel version.
-
 
