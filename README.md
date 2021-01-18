@@ -1,4 +1,4 @@
-# Adaptive CPU frequency controller
+![alt text](https://github.com/mkarpowi/keffy/blob/main/img/Keffy_color.png?raw=true)
 
 ## Introduction
 
@@ -83,4 +83,3 @@ you can use *install_tools.sh* script:
 When creating new branch, modify the kernel version in **config.sh** and update
 submodules. You can use **checkout_repos.sh** script. Bear in mind that
 cpufreq_adaptive submodule has different branch for every kernel version.
-
