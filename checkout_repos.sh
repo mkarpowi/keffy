@@ -18,8 +18,8 @@ if ! git remote | grep origin > /dev/null; then
     git remote add origin $TELEMETRY_REPO
 fi
 git fetch;
-git checkout master-$LINUX_VERSION;
-git merge origin/master-$LINUX_VERSION;
+git checkout master;
+git merge origin/master;
 
 cd $CPUFREQ_ADAPTIVE_PATH
 if ! git remote | grep origin > /dev/null; then
