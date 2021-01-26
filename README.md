@@ -3,7 +3,7 @@
 ## Introduction
 
 The presented project is an adaptive controller in the Linux kernel space for CPU performance optimisation based on dynamic voltage and frequency scaling.
-The module continuously identificates the CPUs queues and synthesises the controller that keeps the load of the processor on the desired level. 
+The module continuously identifies the CPUs queues and synthesises the controller that keeps the load of the processor on the desired level.
 
 Precise description of the controller design could be found in articles.
 
@@ -50,7 +50,7 @@ Then it uses lstress application to stress the CPU in 3 phases:
 * for following 10 seconds it does not stress the processor at all
 * for following 20 seconds it stresses the processor to make the CPU controller work in the controllability region
 
-In order to start the demontration script:
+In order to start the demonstration script:
 ```
 /bin/bash play.sh
 ```
@@ -64,12 +64,12 @@ In the case of not having installed all of the required python tools, you can us
 
 #### Client-server application
 
-In order to be able to compare the performance of the already available governors 
+In order to be able to compare the performance of the already available governors
 with adaptive controller, client-server application was created.
 
 On the server side adaptive controller should be loaded.
 The client sends request to perform various tasks by the server in order to stress its CPU and reads the power consumption.
-Based on the measured response times and the information about the power consuption it creates plots with comparison between
+Based on the measured response times and the information about the power consumption it creates plots with comparison between
 the governors and chosen parameters of the adaptive controller.
 
 ## Developer
