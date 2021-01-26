@@ -36,3 +36,11 @@ fi
 git fetch;
 git checkout master;
 git merge origin/master;
+
+cd $TEST_PYTHON_PATH
+if ! git remote | grep origin > /dev/null; then
+    git remote add origin $TEST_PYTHON_REPO
+fi
+git fetch;
+git checkout master;
+git merge origin/master;
