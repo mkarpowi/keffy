@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export LINUX_VERSION=5.4.0
+export LINUX_VERSION=5.6.4
 export TOP_DIR=$PWD
 
 export CPUFREQ_ADAPTIVE_REPO=git@git2.zisi.nask.pl:cpu_control/cpufreq_adaptive.git
