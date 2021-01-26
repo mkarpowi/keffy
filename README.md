@@ -47,31 +47,38 @@ It compiles all the necessary software and loads the module into the kernel.
 
 Then it uses lstress application to stress the CPU in 3 phases:
 * for the first 10 seconds it makes the CPU to use 100% of the resources
-* for following 10 seconds it does not stress the processor at all
-* for following 20 seconds it stresses the processor to make the CPU controller work in the controllability region
+* for the following 10 seconds it does not stress the processor at all
+* for the following 20 seconds it stresses the processor to make the CPU
+	controller work in the controllability region
 
 In order to start the demonstration script:
 ```
 /bin/bash play.sh
 ```
 
-After more or less a minute you should see plots of the processor load and frequency together with some of the parameters of the controller.
+After more or less a minute you should see plots of the processor load and
+frequency together with some of the parameters of the controller.
 
-In the case of not having installed all of the required python tools, you can use *install_tools.sh* script:
+In the case of not having installed all of the required python tools,
+you can use *install_tools.sh* script:
 ```
 /bin/bash install_tools.sh
 ```
 
 #### Client-server application
 
-In order to be able to compare the performance of the already available governors
-with adaptive controller, client-server application was created.
+In order to be able to compare the performance of the already available
+governors with adaptive controller, client-server application was created.
 
-On the server side adaptive controller should be loaded.
-The client sends request to perform various tasks by the server in order to stress its CPU and reads the power consumption.
-Based on the measured response times and the information about the power consumption it creates plots with comparison between
-the governors and chosen parameters of the adaptive controller.
+On the server side adaptive controller should be installed.
+The client sends request to perform various tasks by the server in order to
+stress its CPU and reads the power consumption.  Based on the measured
+response times and the information about the power consumption it creates
+plots with comparison between the governors and the chosen parameters of
+adaptive controller.
 
 ## Developer
 
-When creating new branch, modify kernel version in config.sh and update submodules. You can use checkout_repos script.
+When creating new branch, modify kernel version in config.sh and update
+submodules. You can use checkout_repos script. Bear in mind that
+cpufreq_adaptive submodule has different branch for every kernel version.
