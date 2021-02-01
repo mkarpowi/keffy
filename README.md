@@ -77,17 +77,6 @@ you can use *install_tools.sh* script:
 /bin/bash install_tools.sh
 ```
 
-#### Client-server application
-
-To compare the performance of the already available acpi-cpufreq governors with
-that of the new adaptive controller, use the client-server app.
-
-The adaptive controller should be installed on the server. The client sends 
-request to perform various tasks by the server in order to
-stress its CPU and reads the power consumption.  Based on the measured
-response times and the information about the power consumption it creates
-plots with comparison between the governors and the chosen parameters of
-adaptive controller.
 
 ## Developer
 
