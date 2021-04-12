@@ -12,6 +12,8 @@ The controller has been designed as the indirect self-tuning regulator with
 robust recursive model estimation. For more details on the [project background](https://www.researchgate.net/publication/335110363_Fixed-point_self-tuning_CPU_performance_controller_for_Linux_kernel)
 and the control theory applied in the controller design, see:
 
+* Malczak, M. and Karpowicz, M.P. *Fixed-point matrix inversion for linear solver in Linux kerne.* in preparation, 2021.
+
 * Getka, M., and Karpowicz, M.P. *Fixed-point self-tuning CPU performance controller for Linux kernel.* 2019 International Conference on High Performance Computing & Simulation (HPCS). IEEE, 2019.
 
 * Arabas, P., and Karpowicz, M.P. *Server Power Consumption: Measurements and Modeling with MSRs.* Challenges in Automation, Robotics and Measurement Techniques, Springer International Publishing, 233–244, 2016
